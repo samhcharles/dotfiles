@@ -1,0 +1,88 @@
+# ~/.config/starship.toml — fast, informative, language-aware.
+# Docs: https://starship.rs/config/
+
+add_newline = true
+command_timeout = 1000
+scan_timeout = 30
+
+format = """
+[╭─](bold green) $username$hostname$directory$git_branch$git_status$git_state\
+$nodejs$python$rust$golang$ruby$java$php$package\
+$cmd_duration$jobs
+[╰─](bold green)$character """
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol   = "[✗](bold red)"
+vimcmd_symbol  = "[❮](bold green)"
+
+[username]
+style_user = "yellow bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = false
+
+[hostname]
+ssh_only = true
+format = "[@$hostname](bold cyan) "
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+style = "bold blue"
+read_only = " 🔒"
+format = " [$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold red"
+format = '([$all_status$ahead_behind]($style) )'
+conflicted = "="
+ahead      = "⇡${count}"
+behind     = "⇣${count}"
+diverged   = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked  = "?${count}"
+stashed    = "$${count}"
+modified   = "!${count}"
+staged     = "+${count}"
+renamed    = "»${count}"
+deleted    = "✘${count}"
+
+[cmd_duration]
+min_time = 2000
+format = "[took $duration](bold yellow) "
+
+[jobs]
+symbol = "✦ "
+threshold = 1
+
+[nodejs]
+symbol = " "
+format = "[$symbol($version )]($style)"
+
+[python]
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[rust]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[java]
+symbol = " "
+
+[php]
+symbol = " "
+
+[package]
+disabled = true

@@ -1,0 +1,15 @@
+
+# <type>(<scope>): <subject>   ── 50 chars max ─────────────────|
+#
+# <body>   ── wrap at 72 ───────────────────────────────────────────────|
+#
+# <footer>
+#
+# ─────────────────────────────────────────────────────────────────────
+# Type:    feat | fix | refactor | docs | test | chore | perf | build | ci
+# Scope:   the area touched (optional). e.g. auth, api, ui
+# Subject: imperative, present tense. "add x" not "added x" or "adds x"
+#
+# Body:    why, not what. The diff already shows what changed.
+# Footer:  BREAKING CHANGE: ... or  Closes #123, Refs #456
+# ─────────────────────────────────────────────────────────────────────
