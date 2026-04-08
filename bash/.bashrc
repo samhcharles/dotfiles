@@ -1,28 +1,17 @@
-# ~/.bashrc — entry point
-# Modular shell config. Real settings live in ~/.dotfiles/bash/config/*.sh.
-# Keep this file boring; put new things in a focused module instead.
+# ~/.bashrc — entry point. Bail for non-interactive shells.
+case $- in *i*) ;; *) return ;; esac
 
-# Bail out for non-interactive shells.
-case $- in
-    *i*) ;;
-      *) return;;
-esac
-
-# Resolve the dotfiles directory regardless of where this rc lives.
-if [ -L "$HOME/.bashrc" ]; then
-    DOTFILES_DIR="$(cd "$(dirname "$(readlink "$HOME/.bashrc")")/.." && pwd)"
-else
-    DOTFILES_DIR="${DOTFILES_DIR:-$HOME/.dotfiles}"
-fi
+# Resolve the dotfiles directory from this file's symlink target.
+_src="${BASH_SOURCE[0]}"
+[ -L "$_src" ] && _src="$(readlink "$_src")"
+DOTFILES_DIR="$(cd "$(dirname "$_src")/.." && pwd)"
+unset _src
 export DOTFILES_DIR
 
-# Source every module in config/, in lexical order.
-if [ -d "$DOTFILES_DIR/bash/config" ]; then
-    for _module in "$DOTFILES_DIR/bash/config"/*.sh; do
-        [ -r "$_module" ] && . "$_module"
-    done
-    unset _module
-fi
+for _m in "$DOTFILES_DIR/bash/config"/*.sh; do
+    [ -r "$_m" ] && . "$_m"
+done
+unset _m
 
 # Per-machine overrides — never tracked.
 [ -r "$HOME/.bashrc.local" ] && . "$HOME/.bashrc.local"

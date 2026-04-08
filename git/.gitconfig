@@ -1,7 +1,4 @@
-[user]
-	# Override in ~/.gitconfig.local with your real identity.
-	name = Samuel H. Charles
-	email = ws-sam@users.noreply.github.com
+# Identity lives in ~/.gitconfig.local (included at the bottom).
 
 [init]
 	defaultBranch = main
@@ -11,8 +8,6 @@
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	pager = less -FRX
-	whitespace = trailing-space,space-before-tab
-	commitGraph = true
 
 [commit]
 	template = ~/.gitmessage
@@ -25,47 +20,24 @@
 [push]
 	default = simple
 	autoSetupRemote = true
-	followTags = true
 
 [fetch]
 	prune = true
-	pruneTags = true
-	all = true
 
 [rebase]
 	autosquash = true
 	autostash = true
-	updateRefs = true
 
 [merge]
 	conflictstyle = zdiff3
-	ff = false
-	tool = vimdiff
 
 [diff]
 	algorithm = histogram
-	colorMoved = zebra
 	mnemonicPrefix = true
 	renames = copies
-	tool = vimdiff
-
-[status]
-	branch = true
-	short = true
-	showStash = true
-
-[log]
-	date = iso
-
-[branch]
-	sort = -committerdate
-
-[tag]
-	sort = version:refname
 
 [rerere]
 	enabled = true
-	autoupdate = true
 
 [help]
 	autocorrect = prompt
@@ -73,70 +45,13 @@
 [color]
 	ui = auto
 
-[color "branch"]
-	current = yellow reverse
-	local   = yellow
-	remote  = green
-
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old  = red bold
-	new  = green bold
-
-[color "status"]
-	added     = yellow
-	changed   = green
-	untracked = cyan
-
 [alias]
-	# Status / log
-	st  = status -sb
-	s   = status -sb
-	lg  = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset) %C(dim green)(%ar)' --all
-	last = log -1 HEAD --stat
-	who = shortlog -sn --no-merges
-
-	# Diffs
-	d   = diff
-	ds  = diff --staged
-	dw  = diff --word-diff
-
-	# Branching
-	co  = checkout
-	cob = checkout -b
-	br  = branch
-	sw  = switch
-	swc = switch -c
-
-	# Commits
-	c   = commit
-	cm  = commit -m
-	ca  = commit --amend --no-edit
-	cae = commit --amend
-	fixup = "!f() { git commit --fixup=$1; }; f"
-	squash = "!f() { git commit --squash=$1; }; f"
-
-	# Staging
-	a   = add
-	aa  = add -A
-	ap  = add -p
+	st = status -sb
+	co = checkout
+	br = branch
+	lg = log --graph --oneline --decorate --all
 	unstage = reset HEAD --
-
-	# WIP workflow
-	wip   = "!git add -A && git commit -m 'wip' --no-verify"
-	unwip = "!git log -n 1 --format=%s | grep -q '^wip$' && git reset HEAD~1"
-
-	# Sync
-	up    = "!git pull --rebase --autostash && git submodule update --init --recursive"
-	pf    = push --force-with-lease
-
-	# Cleanup
-	cleanup = "!git branch --merged | grep -vE '^\\*|^\\s*(main|master|develop)$' | xargs -r git branch -d"
-
-	# Show what changed in the last commit
-	changed = show --stat --oneline
+	fixup = "!f() { git commit --fixup=$1; }; f"
 
 [include]
-	# Per-machine overrides — never tracked.
 	path = ~/.gitconfig.local

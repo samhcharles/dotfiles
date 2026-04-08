@@ -1,12 +1,10 @@
 # Local-only overrides — never tracked.
 *.local
-.bashrc.local
-.gitconfig.local
-
-# Editor / OS cruft
-.DS_Store
-*.swp
-*~
 
 # Backups created by install.sh
 .dotfiles-backup/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~
