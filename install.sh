@@ -45,6 +45,7 @@ LINKS=(
     "vim/.vimrc             .vimrc"
     "tmux/.tmux.conf        .tmux.conf"
     "editor/.editorconfig   .editorconfig"
+    "alacritty/alacritty.toml  .config/alacritty/alacritty.toml"
 )
 
 log() { printf '%s\n' "$*"; }
