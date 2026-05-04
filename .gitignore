@@ -1,0 +1,13 @@
+# Local-only overrides — never tracked.
+*.local
+
+# Backups created by install.sh
+.dotfiles-backup/
+
+# Claude Code local settings
+.claude/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~

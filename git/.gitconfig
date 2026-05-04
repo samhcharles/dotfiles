@@ -1,0 +1,57 @@
+# Identity lives in ~/.gitconfig.local (included at the bottom).
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	pager = less -FRX
+
+[commit]
+	template = ~/.gitmessage
+	verbose = true
+
+[pull]
+	rebase = true
+	ff = only
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[fetch]
+	prune = true
+
+[rebase]
+	autosquash = true
+	autostash = true
+
+[merge]
+	conflictstyle = zdiff3
+
+[diff]
+	algorithm = histogram
+	mnemonicPrefix = true
+	renames = copies
+
+[rerere]
+	enabled = true
+
+[help]
+	autocorrect = prompt
+
+[color]
+	ui = auto
+
+[alias]
+	st = status -sb
+	co = checkout
+	br = branch
+	lg = log --graph --oneline --decorate --all
+	unstage = reset HEAD --
+	fixup = "!f() { git commit --fixup=$1; }; f"
+
+[include]
+	path = ~/.gitconfig.local

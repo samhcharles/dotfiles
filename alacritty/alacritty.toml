@@ -1,0 +1,130 @@
+# Alacritty config — Rosé Pine + transparency
+
+[window]
+opacity = 0.88
+blur = true
+padding = { x = 12, y = 10 }
+decorations = "buttonless"
+dynamic_padding = false
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+size = 13.0
+
+[font.offset]
+x = 0
+y = 4
+
+[font.glyph_offset]
+x = 0
+y = 2
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 600
+unfocused_hollow = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+# ── Rosé Pine ────────────────────────────────────────────────────────────────
+[colors.primary]
+background = "#191724"
+foreground = "#e0def4"
+
+[colors.cursor]
+text   = "#191724"
+cursor = "#e0def4"
+
+[colors.vi_mode_cursor]
+text   = "#191724"
+cursor = "#c4a7e7"
+
+[colors.search.matches]
+foreground = "#191724"
+background = "#9ccfd8"
+
+[colors.search.focused_match]
+foreground = "#191724"
+background = "#f6c177"
+
+[colors.footer_bar]
+background = "#1f1d2e"
+foreground = "#e0def4"
+
+[colors.hints.start]
+foreground = "#191724"
+background = "#f6c177"
+
+[colors.hints.end]
+foreground = "#191724"
+background = "#9ccfd8"
+
+[colors.selection]
+text       = "#e0def4"
+background = "#403d52"
+
+[colors.normal]
+black   = "#26233a"
+red     = "#eb6f92"
+green   = "#31748f"
+yellow  = "#f6c177"
+blue    = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan    = "#ebbcba"
+white   = "#e0def4"
+
+[colors.bright]
+black   = "#6e6a86"
+red     = "#eb6f92"
+green   = "#31748f"
+yellow  = "#f6c177"
+blue    = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan    = "#ebbcba"
+white   = "#e0def4"
+
+# ── Key bindings ─────────────────────────────────────────────────────────────
+[[keyboard.bindings]]
+key   = "Return"
+mods  = "Super|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key   = "K"
+mods  = "Control|Shift"
+action = "ScrollPageUp"
+
+[[keyboard.bindings]]
+key   = "J"
+mods  = "Control|Shift"
+action = "ScrollPageDown"
+
+[[keyboard.bindings]]
+key   = "C"
+mods  = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key   = "V"
+mods  = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key   = "Plus"
+mods  = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key   = "Minus"
+mods  = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key   = "Key0"
+mods  = "Control"
+action = "ResetFontSize"
