@@ -2,7 +2,7 @@
   <img src="assets/samuelhc-pixel.png" width="360">
 </div>
 
-> A reference for my complete daily environment. Windows 11, WSL2 Ubuntu, and a self-hosted VPS. Clone and run `./install.sh` on the WSL side to replicate the shell stack.
+> Everything inside my laptop, what I use / daily drive etc... Copy everything here and you basically have my laptop setup internally and externally! 
 
 ## The Setup
 
