@@ -6,13 +6,13 @@ Daily-use software on Windows 11.
 
 | App | Role |
 |---|---|
-| [Windows Terminal](https://aka.ms/terminal) | Primary — WSL2 + PowerShell profiles |
+| [Windows Terminal](https://aka.ms/terminal) | Primary - WSL2 + PowerShell profiles |
 
 ## Editors
 
 | App | Role |
 |---|---|
-| [Zed](https://zed.dev) | Primary editor — fast, native feel |
+| [Zed](https://zed.dev) | Primary editor - fast, native feel |
 | [VS Code](https://code.visualstudio.com) | WSL remote extension for heavier work |
 | [Notepad++](https://notepad-plus-plus.org) | Quick Windows-side file edits |
 
@@ -22,7 +22,7 @@ Daily-use software on Windows 11.
 |---|---|
 | [Zen](https://zen-browser.app) | Firefox-based, vertical tabs, clean profile per workspace |
 
-**Favorite site:** [fmhy.net](https://fmhy.net) — used almost daily, mainly the streaming tab.
+**Favorite site:** [fmhy.net](https://fmhy.net) - used almost daily, mainly the streaming tab.
 
 ## Security
 
@@ -44,24 +44,24 @@ No open ports needed. Tailscale handles cross-device SSH and private service acc
 
 | App | Role |
 |---|---|
-| [Coolify](https://coolify.io) | Self-hosted PaaS — manages all containers on the Hostinger VPS |
+| [Coolify](https://coolify.io) | Self-hosted PaaS - manages all containers on the Hostinger VPS |
 
-Coolify runs on the VPS (Hostinger KVM). All services — bots, gateways, dashboards — are deployed from the Coolify UI with no manual SSH.
+Coolify runs on the VPS (Hostinger KVM). All services - bots, gateways, dashboards - are deployed from the Coolify UI with no manual SSH.
 
 ## Productivity & Utilities
 
 | App | Role |
 |---|---|
-| [Obsidian](https://obsidian.md) | Second brain — PARA vault at `~/brain` |
+| [Obsidian](https://obsidian.md) | Second brain - PARA vault at `~/brain` |
 | [Microsoft PowerToys](https://github.com/microsoft/PowerToys) | Awake, Color Picker, Always on Top, Command Palette |
-| [MemReduce](https://memreduct.org) | RAM trimmer — trims working set memory on demand from the tray |
+| [MemReduce](https://memreduct.org) | RAM trimmer - trims working set memory on demand from the tray |
 
 ### PowerToys utilities in use
 
-- **Awake** — keeps the machine awake without touching power settings
-- **Color Picker** — picks any on-screen color and copies hex/rgb
-- **Always on Top** — pins any window above all others with `Win + Ctrl + T`
-- **Command Palette** — quick app launch and command runner
+- **Awake** - keeps the machine awake without touching power settings
+- **Color Picker** - picks any on-screen color and copies hex/rgb
+- **Always on Top** - pins any window above all others with `Win + Ctrl + T`
+- **Command Palette** - quick app launch and command runner
 
 ## Capture
 
@@ -73,10 +73,10 @@ Coolify runs on the VPS (Hostinger KVM). All services — bots, gateways, dashbo
 
 | App | Role |
 |---|---|
-| [Windhawk](https://windhawk.net) | System mod loader — see `windhawk.md` |
+| [Windhawk](https://windhawk.net) | System mod loader - see `windhawk.md` |
 
 ## Cursor
 
-Custom cursor — files at [`../assets/cursor/`](../assets/cursor/).
+Custom cursor - files at [`../assets/cursor/`](../assets/cursor/).
 
 Apply: Control Panel → Mouse → Pointers → Browse to cursor files.

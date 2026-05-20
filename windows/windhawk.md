@@ -1,15 +1,15 @@
 # Windhawk
 
-[Windhawk](https://windhawk.net) — Windows system mod loader. These 4 mods are active.
+[Windhawk](https://windhawk.net) - Windows system mod loader. These 4 mods are active.
 
 ## Installed mods
 
 | Mod | What it does |
 |---|---|
-| [Disable grouping on the taskbar](https://windhawk.net/mods/taskbar-grouping) | One button per window — no combined groups |
+| [Disable grouping on the taskbar](https://windhawk.net/mods/taskbar-grouping) | One button per window - no combined groups |
 | [Taskbar tray system icon tweaks](https://windhawk.net/mods/taskbar-tray-system-icon-tweaks) | Hide volume, network, battery, bell, and other tray icons individually |
 | [Taskbar Volume Control Per-App](https://windhawk.net/mods/taskbar-volume-control) | Scroll over a taskbar button to adjust that app's volume |
-| [Windows 11 Taskbar Styler](https://windhawk.net/mods/windows-11-taskbar-styler) | Full taskbar theme engine — using **Rosé Pine** |
+| [Windows 11 Taskbar Styler](https://windhawk.net/mods/windows-11-taskbar-styler) | Full taskbar theme engine - using **Rosé Pine** |
 
 ## Theme
 
