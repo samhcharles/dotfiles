@@ -172,7 +172,7 @@ editor/                  .editorconfig
 ## Quick Start
 
 ```bash
-git clone https://github.com/samhcharles/my-laptop.git ~/.dotfiles
+git clone https://github.com/samhcus/my-laptop.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
 ```
